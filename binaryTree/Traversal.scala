@@ -1,7 +1,7 @@
 import scala.io.StdIn._
 import Console.println
 
-class Node[T](var data: T, var left: Node[T], var right: Node[T])
+case class Node[T](var data: T, var left: Node[T], var right: Node[T])
 
 class BinaryTree(var root: Node[String] = null) {
   def createTree(it: Iterator[String]): Node[String] = {
