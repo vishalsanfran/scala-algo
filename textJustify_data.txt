@@ -1,0 +1,3 @@
+Scala source code is intended to be compiled to Java bytecode, so that the resulting executable code runs on a Java virtual machine.
+ Scala provides language interoperability with Java, so that libraries written in both languages may be referenced directly in Scala or Java code
+Like Java, Scala is object-oriented, and uses a curly-brace syntax reminiscent of the C programming language xy.
