@@ -1,8 +1,10 @@
-import Console.println
+package hashTable
+
 import scala.collection.mutable.{Map => MMap}
+
 object Solution {
   def isAnagram(s: String, t: String): Boolean= {
-    return getCharCountMap(s).equals(getCharCountMap(t))
+    getCharCountMap(s).equals(getCharCountMap(t))
   }
 
   def getCharCountMap(s: String): MMap[Char, Int]= {
@@ -11,7 +13,7 @@ object Solution {
       val initVal = charCountMap.getOrElse(s(idx), 0)
       charCountMap.put(s(idx), initVal+1)
     }
-    return charCountMap
+    charCountMap
   }
 }
 
@@ -26,5 +28,3 @@ object ValidAnagram extends App {
   val cond = if (Solution.isAnagram(inputList(0), inputList(1))) " is" else " is not"
   println(inputList(0) + cond + " anagram of " + inputList(1))
 }
-
-//test run: echo -e "abcba\naabcb\n" | scala 242_valid_anagram.scala
