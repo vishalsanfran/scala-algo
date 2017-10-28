@@ -2,7 +2,7 @@ package hashTable
 
 import scala.collection.mutable.{Map => MMap}
 
-object Solution {
+object ValidAnagram242 {
   def isAnagram(s: String, t: String): Boolean= {
     getCharCountMap(s).equals(getCharCountMap(t))
   }
@@ -17,7 +17,7 @@ object Solution {
   }
 }
 
-object ValidAnagram extends App {
+object ValidAnagram242_main extends App {
   var inputList = List[String]()
   var readVal = ""
   for(idx <- 0 to 1){
@@ -25,6 +25,6 @@ object ValidAnagram extends App {
     inputList = inputList :+ readVal
   }
   //println(inputList)
-  val cond = if (Solution.isAnagram(inputList(0), inputList(1))) " is" else " is not"
+  val cond = if (ValidAnagram242.isAnagram(inputList(0), inputList(1))) " is" else " is not"
   println(inputList(0) + cond + " anagram of " + inputList(1))
 }

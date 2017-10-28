@@ -1,6 +1,6 @@
+package game
+
 import scala.io.StdIn._
-import scala.runtime.ScalaRunTime._
-import scala.collection.immutable.IndexedSeq
 
 trait BoardGame {
   def readBoard(it: Iterator[String]): Array[Array[Char]]

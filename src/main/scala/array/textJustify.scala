@@ -1,4 +1,6 @@
-import Console.println
+package array
+
+import scala.Console.println
 import scala.io.Source
 
 
