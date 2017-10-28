@@ -1,3 +1,5 @@
+package linkedList
+
 import org.scalatest.FunSuite
 
 class LinkedListCreate extends FunSuite{

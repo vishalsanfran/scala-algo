@@ -1,30 +1,20 @@
 package linkedList
 
-case class Node[T](var data: T, var next: Node[T])
-
-class LinkedList {
-  var root: Node[String] = _
-}
-
-object LinkedList {
-  def apply(it: Iterator[String]=null): Node[String] = {
-    var root = new Node[String](null, null)
-    if (it == null) {
-      return root
-    }
-    var cur = root.next
+object ReverseLinkedList206 {
+  def reverse(root: Node[String]): Node[String] = {
+    if (root.next == null) return root
+    var curRoot = root
     var prev = root
-    while(it.hasNext) {
-      cur = new Node[String](it.next(), null)
-      prev.next = cur
+    var cur = prev.next
+    prev.next = null
+    var save: Node[String] = null
+    while(cur != null) {
+      save = cur.next
+      cur.next = prev
       prev = cur
-      cur = cur.next
+      cur = save
     }
-    root = root.next
-    root
+    curRoot = prev
+    curRoot
   }
-}
-
-class ReverseLinkedList206 {
-
 }
