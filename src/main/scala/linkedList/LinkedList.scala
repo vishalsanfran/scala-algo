@@ -18,7 +18,6 @@ object LinkedList {
       cur = new Node[String](it.next(), null)
       prev.next = cur
       prev = cur
-      cur = cur.next
     }
     root = root.next
     root
