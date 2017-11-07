@@ -1,8 +1,6 @@
 package linkedList
 
-case class DNode[T](var data: T, var next: DNode[T], var prev: DNode[T]) {
-  override def toString: String = {data.toString}
-}
+case class DNode[T](var data: T, var next: DNode[T], var prev: DNode[T])
 
 object DoublyLinkedList {
   def create(it: Iterator[String]): (DNode[String], DNode[String]) = {
